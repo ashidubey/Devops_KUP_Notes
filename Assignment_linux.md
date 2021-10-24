@@ -317,21 +317,7 @@ Ans. Your public SSH key is like your username or identity, and you can share it
 
 # **Q49. Create a unit file for any application.**
 
-Ans.
-[Unit]
-Description= mynginx- server start
-
-[Service]
-User= knoldus
-PIDFile=/run/nginx.pid
-ExecStartPre=/usr/sbin/nginx -t
-ExecStart=/usr/sbin/nginx
-ExecReload=/usr/sbin/nginx -s reload
-ExecStop=/bin/kill -s QUIT $MAINPID
-PrivateTmp=true
-
-[Install]
-WantedBy=multi-user.target
+Ans. For unit file check (https://github.com/ashidubey/Devops_KUP_Notes/blob/master/Day1_linux/custom.service)
 
 # **Q50. What is RHEL?**
 
