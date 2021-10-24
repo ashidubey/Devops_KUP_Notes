@@ -142,11 +142,11 @@ Ans.
 
 Ans. 
 
-` `**awk** - awk - $ awk '{print "Hello"}' - It prints the statement.
+` **awk** ` - awk - $ awk '{print "Hello"}' - It prints the statement.
 
-**\*grep\*** - grep -i "a" a.txt
+` **grep** ` - grep -i "a" a.txt
 
-**\*sed\*-** sed 's/string/stringtobereplaced/g' filename
+` **sed** ` sed 's/string/stringtobereplaced/g' filename
 
 # **Q23. How many tables are there in iptables?**
 
