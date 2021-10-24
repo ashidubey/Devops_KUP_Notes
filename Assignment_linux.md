@@ -317,17 +317,21 @@ Ans. Your public SSH key is like your username or identity, and you can share it
 
 # **Q49. Create a unit file for any application.**
 
-Ans. create a systemd service unit file named test.service
+Ans.
+[Unit]
+Description= mynginx- server start
 
-:/etc/systemd/system # cat /etc/systemd/system/test.service
+[Service]
+User= knoldus
+PIDFile=/run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t
+ExecStart=/usr/sbin/nginx
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
 
-ExecStart=/bin/bash /usr/sbin/example.sh
-
+[Install]
 WantedBy=multi-user.target
-
-systemctl daemon-reload
-
-systemctl enable test.service
 
 # **Q50. What is RHEL?**
 
